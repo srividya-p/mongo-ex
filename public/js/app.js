@@ -6,7 +6,7 @@ $(document).ready(function () {
         }).done(function (data) {
             if (data.length > 0) {
                 jQuery.each(data, function (i, val) {
-                    $('#res').append('<h4>Name:&emsp;'+val.name + '&emsp14;&emsp14;&emsp14;&emsp14; Location:' + val.location + '</h4><br>')
+                    $('#res').append('<h4>Name:&nbsp;'+val.name + '&emsp14;&emsp14;&emsp14;&emsp14; Location:&nbsp;' + val.location + '</h4><br>')
                 })
             } else {
                 $("#res").html('<h4>No Users Found</h4>');
