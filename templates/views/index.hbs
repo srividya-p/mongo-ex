@@ -15,8 +15,8 @@
             <div class='container'>
                 <h2>Add User</h2>
                 <form action="/add" method="POST">
-                    <input type="text" class="form-input" placeholder="Name" name="name"><br><br>
-                    <input type="text" class="form-input" placeholder="Location" name="location"><br><br>
+                    <input type="text" class="form-input" placeholder="Name" name="name" required><br><br>
+                    <input type="text" class="form-input" placeholder="Location" name="location" required><br><br>
                     <button type="submit" class='butt'>Add</button>
                 </form><br><br>
             </div>
@@ -36,7 +36,7 @@
         <div class='card'>
             <div class='container'>
                 <h2>Search User</h2>
-                <input type="text" class="form-input" id="key" placeholder="Search by Name or Location"><br><br>
+                <input type="text" required class="form-input" id="key" placeholder="Search by Name or Location"><br><br>
                 <input type="submit" id="search" value="Search" class="butt"><br><br>
                 <h2>Search Results</h2>
                 <div id="res"></div><br><br>
