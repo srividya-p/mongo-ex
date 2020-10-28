@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Go-Refer</title>
+    <link rel='stylesheet' href='/css/styles.css'>
+</head>
+
+<body>
+    <div id="bod">
+        <h1>User Details Collection</h1>
+        <br>
+        <div class='card'>
+            <div class='container'>
+                <h2>Add User</h2>
+                <form action="/add" method="POST">
+                    <input type="text" class="form-input" placeholder="Name" name="name"><br><br>
+                    <input type="text" class="form-input" placeholder="Location" name="location"><br><br>
+                    <button type="submit" class='butt'>Add</button>
+                </form><br><br>
+            </div>
+        </div>
+
+        <br><br>
+        <div class='card'>
+            <div class='container'>
+                <h2>Users</h2>
+                {{#each result}}
+                <h4>Name: {{this.name}}&emsp14;&emsp14;&emsp14;&emsp14; Location: {{this.location}}&emsp14;&emsp14;&emsp14;&emsp14;<button data-feather="trash-2"
+                        onclick="remove('{{this._id}}')"></button></h4>
+                {{/each}}<br><br>
+            </div>
+        </div>
+        <br><br>
+        <div class='card'>
+            <div class='container'>
+                <h2>Search User</h2>
+                <input type="text" class="form-input" id="key" placeholder="Search by Name or Location"><br><br>
+                <input type="submit" id="search" value="Search" class="butt"><br><br>
+                <h2>Search Results</h2>
+                <div id="res"></div><br><br>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script src='/js/app.js'></script>
+
+<script>
+    feather.replace()
+</script>
+
+</html>
